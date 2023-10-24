@@ -1,0 +1,21 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+    <body>
+
+        <%- include('./partials/nav.ejs') %>
+
+        <div classe="blurbs content">
+            <h2>All Blurbs</h2>
+            <% if (blurbs.length > 0) { %>
+                <% blurbs.forEach(blurb => { %>
+                    <h3 class="title"> <%= blurb.title %></h3>
+                    <p class="snippet"> <%= blurb.snippet %></p>
+                <% }) %>
+            <% } else { %>
+                <p>There are no blogs to display...</p>
+             <% } %>
+        </div>
+
+        <%- include('./partials/footer.ejs') %>
+    </body>
+</html>
